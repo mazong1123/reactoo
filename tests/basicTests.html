@@ -23,7 +23,7 @@
             var dummy = new window.DummyClass();
 
             // Assert
-            assert.ok(true, 'Failed to test paramless initialization.');
+            assert.ok(true, 'Paramless initialization works.');
         });
 
         QUnit.test('Custom react setting test', function (assert) {
@@ -47,7 +47,29 @@
             var newFool = test.getReactClassSettings().newFoo;
 
             // Assert
-            assert.strictEqual(typeof (newFool), 'function', 'Failed to test custom react setting.');
+            assert.strictEqual(typeof (newFool), 'function', 'Custom react setting works.');
+        });
+
+        QUnit.test('Render test', function (assert) {
+            // Prepare
+            var fixture = $("#qunit-fixture");
+
+            window.TestClass = window.ReactOO.ReactBase.extend({
+                onReactRender: function (reactInstance) {
+                    return React.createElement("div",
+                        {
+                            className: "comment"
+                        });
+                }
+            });
+
+            var test = new window.TestClass();
+            
+            // Act
+            test.render({}, '#qunit-fixture');
+
+            // Assert
+            assert.equal($("div.comment", fixture).length, 1, "comment div added successfully!");
         });
     </script>
 </body>

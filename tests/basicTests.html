@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Basic Tests</title>
+    <link rel="stylesheet" href="lib/qunit.css" />
+    <script src="lib/jquery.js"></script>
+    <script src="lib/es5-shim.js"></script>
+    <script src="lib/react.js"></script>
+    <script src="lib/react-dom.js"></script>
+    <script src="../dist/reactoo.js"></script>
+</head>
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="lib/qunit.js"></script>
+    <script>
+        QUnit.test('Initialize paramless test', function (assert) {
+            // Prepare
+            window.DummyClass = window.ReactOO.ReactBase.extend();
+
+            // Act
+            var dummy = new window.DummyClass();
+
+            // Assert
+            assert.ok(true, 'Failed to test paramless initialization.');
+        });
+
+        QUnit.test('Custom react setting test', function (assert) {
+            // Prepare
+            window.TestClass = window.ReactOO.ReactBase.extend({
+                getReactClassSettings: function () {
+                    var self = this;
+                    var baseSettings = self._super();
+
+                    baseSettings.newFoo = function () {
+                        return 'newFoo';
+                    }
+
+                    return baseSettings;
+                }
+            });
+
+            var test = new window.TestClass();
+
+            // Act
+            var newFool = test.getReactClassSettings().newFoo;
+
+            // Assert
+            assert.strictEqual(typeof (newFool), 'function', 'Failed to test custom react setting.');
+        });
+    </script>
+</body>
+</html>

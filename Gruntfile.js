@@ -58,7 +58,7 @@ module.exports = function (grunt) {
                 mangle: true,
                 preserveComments: false
             },
-            chitu: {
+            reatoo: {
                 files: [{
                     src: '<%= meta.distPath %><%= pkg.name %>.js',
                     dest: '<%= meta.distPath %><%= pkg.name %>.min.js'
@@ -94,7 +94,8 @@ module.exports = function (grunt) {
 
     // Default task(s).    
     grunt.registerTask('dist-js', ['uglify']);
-    grunt.registerTask('dist', ['clean', 'copy', 'dist-js']);
+    grunt.registerTask('dist', ['clean', 'copy', 'dist-js', 'qunit']);
+    grunt.registerTask('test', ['qunit']);
     grunt.registerTask('default', ['dist']);
 
     // Version numbering task.

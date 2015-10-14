@@ -45,9 +45,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="tests\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="dist\reactoo.js" />
     <Content Include="dist\reactoo.min.js" />
@@ -60,6 +58,13 @@
     <Content Include="examples\scripts\react.js" />
     <Content Include="Gruntfile.js" />
     <Content Include="src\reactoo.js" />
+    <Content Include="tests\lib\es5-shim.js" />
+    <Content Include="tests\lib\jquery.js" />
+    <Content Include="tests\lib\qunit.css" />
+    <Content Include="tests\lib\qunit.js" />
+    <Content Include="tests\basicTests.html" />
+    <Content Include="tests\lib\react-dom.js" />
+    <Content Include="tests\lib\react.js" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="package.json" />

@@ -52,7 +52,7 @@
 
         QUnit.test('Render test', function (assert) {
             // Prepare
-            var fixture = $("#qunit-fixture");
+            var fixture = $('#qunit-fixture');
 
             window.TestClass = window.ReactOO.ReactBase.extend({
                 onReactRender: function (reactInstance) {
@@ -69,7 +69,32 @@
             test.render({}, '#qunit-fixture');
 
             // Assert
-            assert.equal($("div.comment", fixture).length, 1, "comment div added successfully!");
+            assert.equal($("div.comment", fixture).length, 1, "comment div added successfully.");
+        });
+
+        QUnit.test('Render with props test', function (assert) {
+            // Prepare
+            var fixture = $('#qunit-fixture');
+
+            window.TestClass = window.ReactOO.ReactBase.extend({
+                onReactRender: function (reactInstance) {
+                    var content = reactInstance.props.content;
+                    return React.createElement("div",
+                        {
+                            className: "comment"
+                        }, content);
+                }
+            });
+
+            var test = new window.TestClass();
+
+            // Act
+            test.render({
+                content: 'here is content',
+            }, '#qunit-fixture');
+
+            // Assert
+            assert.equal($("div.comment", fixture).html(), 'here is content', "comment div content works.");
         });
     </script>
 </body>

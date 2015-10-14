@@ -88,8 +88,32 @@
                     return self.onReactGetInitialState(this);
                 },
 
+                componentWillMount: function(){
+                    return self.onReactComponentWillMount(this);
+                },
+
                 componentDidMount: function () {
                     return self.onReactComponentDidMount(this);
+                },
+
+                componentWillReceiveProps: function (nextProps) {
+                    return self.onReactComponentWillReceiveProps(this, nextProps);
+                },
+
+                shouldComponentUpdate: function (nextProps, nextState) {
+                    return self.onReactShouldComponentUpdate(this, nextProps, nextState);
+                },
+
+                componentWillUpdate: function (nextProps, nextState) {
+                    return self.onReactComponentWillUpdate(this, nextProps, nextState);
+                },
+
+                componentDidUpdate: function(prevProps, prevState){
+                    return self.onReactComponentDidUpdate(this, prevProps, prevState);
+                },
+
+                componentWillUnmount: function () {
+                    return self.onReactComponentWillUnmount(this);
                 },
 
                 handleSubmit: function (e) {
@@ -114,7 +138,25 @@
             return null;
         },
 
+        onReactComponentWillMount: function(reactInstance){
+        },
+
         onReactComponentDidMount: function (reactInstance) {
+        },
+
+        onReactComponentWillReceiveProps: function (reactInstance, nextProps) {
+        },
+
+        onReactShouldComponentUpdate: function (reactInstance, nextProps, nextState) {
+        },
+
+        onReactComponentWillUpdate: function (reactInstance, nextProps, nextState) {
+        },
+
+        onReactComponentDidUpdate: function(reactInstance, prevProps, prevState){
+        },
+
+        onReactComponentWillUnmount: function (reactInstance) {
         },
 
         onReactHandleSubmit: function (reactInstance, e) {

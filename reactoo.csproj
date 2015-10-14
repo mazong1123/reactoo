@@ -51,7 +51,9 @@
     <Content Include="dist\reactoo.min.js" />
     <Content Include="examples\css\base.css" />
     <Content Include="examples\index.html" />
+    <Content Include="examples\inherit.html" />
     <Content Include="examples\scripts\example.js" />
+    <Content Include="examples\scripts\inherit.js" />
     <Content Include="examples\scripts\jquery.min.js" />
     <Content Include="examples\scripts\marked.min.js" />
     <Content Include="examples\scripts\react-dom.js" />

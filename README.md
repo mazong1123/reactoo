@@ -27,7 +27,7 @@ ReactOO provides a base class **window.ReactOO.ReactBase**. Every component clas
     button.render({ text: 'Button' }, '#normalButton');
 ```
 
-Subclass example:
+Note we can override **getButtonProperty** to customize the button in subclass. Subclass example:
 ```javascript
     window.StyledButtonClass = window.ButtonClass.extend({
         getReactDisplayName: function () {
@@ -71,3 +71,5 @@ Subclass example:
     var styledButtonWithClickHandler = new window.StyledButtonWithClickHandlerClass();
     styledButtonWithClickHandler.render({ text: 'Styled Button With Click Handler' }, '#styledButtonWithClickHandler');
 ```
+
+Please fine more examples in the /example folder. Thanks.

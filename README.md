@@ -1,5 +1,5 @@
 # reactoo
-Add OO to react.js including inheritance, overriding and etc.
+Add OO features to react.js including inheritance, overriding and etc.
 
 ##Usage
 
@@ -72,4 +72,4 @@ Note we can override **getButtonProperty** to customize the button in subclass. 
     styledButtonWithClickHandler.render({ text: 'Styled Button With Click Handler' }, '#styledButtonWithClickHandler');
 ```
 
-Please fine more examples in the /example folder. Thanks.
+Please find more examples in the /example folder. Thanks.

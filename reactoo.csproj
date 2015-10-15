@@ -51,6 +51,7 @@
     <Content Include="dist\reactoo.min.js" />
     <Content Include="examples\css\base.css" />
     <Content Include="examples\index.html" />
+    <Content Include="examples\vehicleAirplane.html" />
     <Content Include="examples\inherit.html" />
     <Content Include="examples\scripts\example.js" />
     <Content Include="examples\scripts\inherit.js" />
@@ -58,6 +59,7 @@
     <Content Include="examples\scripts\marked.min.js" />
     <Content Include="examples\scripts\react-dom.js" />
     <Content Include="examples\scripts\react.js" />
+    <Content Include="examples\scripts\vehicleAirplane.js" />
     <Content Include="Gruntfile.js" />
     <Content Include="src\reactoo.js" />
     <Content Include="tests\lib\es5-shim.js" />

@@ -1,4 +1,5 @@
-﻿/* Simple JavaScript Inheritance
+﻿/** 
+ * @description Simple JavaScript Inheritance
  * By John Resig http://ejohn.org/
  * MIT Licensed.
  */
@@ -43,7 +44,6 @@
               prop[name];
         }
 
-        // The dummy class constructor
         function Class() {
             // All construction is actually done in the init method
             if (!initializing && this.init)
@@ -68,12 +68,26 @@
 
     window.ReactOO = {};
 
+    /**
+    * @description: Base class for components.
+    * For any component, please inherits from this class.
+    */
     window.ReactOO.ReactBase = Class.extend({
+        /**
+        * @description Initializes an instance of window.ReactOO.ReactBase class.
+        */
         init: function () {
             var self = this;
             self.component = self.createReactClass();
         },
 
+        /**
+        * @description Gets the setting object for react class.
+        * The return value is a setting object, which will be internally used 
+        * as the input parameter of React.createClass();
+        * See the document to get in details of the default settings.
+        * Override this method if you want to customize the settings.
+        */
         getReactClassSettings: function () {
             var self = this;
 

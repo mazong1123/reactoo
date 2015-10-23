@@ -3,7 +3,7 @@ Add OO features to react.js including inheritance, overriding and etc.
 
 ##Usage
 
-ReactOO provides a base class **window.ReactOO.ReactBase**. Every component class should be inherted from it.
+ReactOO provides a base class **window.ReactOO.ReactBase**. Every component class should be inherited from it.
 ```javascript
     window.ButtonClass = window.ReactOO.ReactBase.extend({
         getReactDisplayName: function () {

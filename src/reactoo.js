@@ -69,12 +69,12 @@
     window.ReactOO = {};
 
     /**
-    * @description: Base class for components.
+    * Base class for components.
     * For any component, please inherits from this class.
     */
     window.ReactOO.ReactBase = Class.extend({
         /**
-        * @description Initializes an instance of window.ReactOO.ReactBase class.
+        * Initializes an instance of window.ReactOO.ReactBase class.
         */
         init: function () {
             var self = this;
@@ -82,11 +82,12 @@
         },
 
         /**
-        * @description Gets the setting object for react class.
+        * Gets the setting object for react class.
         * The return value is a setting object, which will be internally used 
         * as the input parameter of React.createClass();
         * See the document to get in details of the default settings.
         * Override this method if you want to customize the settings.
+        * @returns {object} React class settings object.
         */
         getReactClassSettings: function () {
             var self = this;
@@ -140,25 +141,55 @@
             };
         },
 
+        /**
+         * Create and returen a React class. Calling React.createClass() internally.
+         * @returns {ReactClass} An instance of ReactClass.
+         */
         createReactClass: function () {
             var self = this;
 
             return React.createClass(self.getReactClassSettings());
         },
 
+        /**
+         * Get the react display of the component.
+         * Override this method to return your component name.
+         * @returns {string} The display name of react class.
+         */
         getReactDisplayName: function () {
+            return 'BaseComponent';
         },
 
+        /**
+         * Override this method to provide render logic.
+         * @param {type} reactInstance The same as "this" in the react.createClass() method. For example,
+         * you can access props via reactInstance.props.
+         */
         onReactRender: function (reactInstance) {
         },
 
+        /**
+         * Override this method to provide initial state object.
+         * @param {reactClass} reactInstance The same as "this" in the react.createClass() method. For example,
+         * you can access props via reactInstance.props.
+         * @returns {object} initial state object.
+         */
         onReactGetInitialState: function (reactInstance) {
             return null;
         },
 
+        /**
+         * 
+         * @param {type} reactInstance The same as "this" in the react.createClass() method. For example,
+         * you can access props via reactInstance.props.
+         */
         onReactComponentWillMount: function (reactInstance) {
         },
 
+        /**
+         * 
+         * @param {type} reactInstance
+         */
         onReactComponentDidMount: function (reactInstance) {
         },
 

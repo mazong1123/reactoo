@@ -45,21 +45,27 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="examples\jsx\userPost.jsx" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="dist\reactoo.js" />
     <Content Include="dist\reactoo.min.js" />
-    <Content Include="examples\css\base.css" />
-    <Content Include="examples\index.html" />
-    <Content Include="examples\vehicleAirplane.html" />
-    <Content Include="examples\inherit.html" />
-    <Content Include="examples\scripts\example.js" />
-    <Content Include="examples\scripts\inherit.js" />
-    <Content Include="examples\scripts\jquery.min.js" />
-    <Content Include="examples\scripts\marked.min.js" />
-    <Content Include="examples\scripts\react-dom.js" />
-    <Content Include="examples\scripts\react.js" />
-    <Content Include="examples\scripts\vehicleAirplane.js" />
+    <Content Include="examples\plainjs\css\base.css" />
+    <Content Include="examples\plainjs\userPost.html" />
+    <Content Include="examples\plainjs\hoc.html" />
+    <Content Include="examples\plainjs\index.html" />
+    <Content Include="examples\plainjs\scripts\hoc.js" />
+    <Content Include="examples\plainjs\scripts\userPost.js" />
+    <Content Include="examples\plainjs\vehicleAirplane.html" />
+    <Content Include="examples\plainjs\inherit.html" />
+    <Content Include="examples\plainjs\scripts\example.js" />
+    <Content Include="examples\plainjs\scripts\inherit.js" />
+    <Content Include="examples\plainjs\scripts\jquery.min.js" />
+    <Content Include="examples\plainjs\scripts\marked.min.js" />
+    <Content Include="examples\plainjs\scripts\react-dom.js" />
+    <Content Include="examples\plainjs\scripts\react.js" />
+    <Content Include="examples\plainjs\scripts\vehicleAirplane.js" />
     <Content Include="Gruntfile.js" />
     <Content Include="src\reactoo.js" />
     <Content Include="tests\lib\es5-shim.js" />
@@ -74,7 +80,13 @@
     <Content Include="package.json" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="examples\api\comments.json" />
+    <Content Include="examples\plainjs\api\comments.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="examples\jsx\hoc.jsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="examples\jsx\profilePage.jsx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

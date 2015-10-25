@@ -73,3 +73,6 @@ Note we can override **getButtonProperty** to customize the button in subclass. 
 ```
 
 Please find more examples in the /example folder. Thanks.
+
+## Test Support
+[BrowserStack](http://www.browserstack.com/) - A great online testing service just makes your life much more easier.
